@@ -1,0 +1,46 @@
+
+
+<ion-header [translucent]="true" color="success">
+    <ion-toolbar>
+        
+        <ion-title size="large">Handwai Calculator <ion-icon name="map-outline"></ion-icon></ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+        <ion-toolbar>
+            <ion-title size="medium">Handwai</ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+
+    <div id="container" >
+        
+        <h3><ion-icon name="locate" ></ion-icon>  your position: {{currentLat}},{{currentLng}}</h3>
+        <h3 > your address: {{currentAddress}}  </h3>
+
+        <ion-item>
+            <ion-label position="stacked" color="danger">Location One</ion-label>
+            <ion-input placeholder="Street, City, County, State, Country, ZipCode" ngModel [(ngModel)]="address[1]"
+                       required></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="stacked">Location Two</ion-label>
+            <ion-input placeholder="Street, City, County, State, Country, ZipCode" [(ngModel)]="address[2]"
+                       required></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="stacked">Location Three</ion-label>
+            <ion-input placeholder="Street, City, County, State, Country, ZipCode" [(ngModel)]="address[3]"
+                       required></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="stacked">Location Four</ion-label>
+            <ion-input placeholder="Street, City, County, State, Country, ZipCode" [(ngModel)]="address[4]"
+                       required></ion-input>
+        </ion-item>
+        <ion-button expand="block" (click)="getClosest()"> <ion-icon name="navigate-outline"></ion-icon> Find closest </ion-button>
+        <p>{{closestAddress}}</p>
+    </div>
+</ion-content>
