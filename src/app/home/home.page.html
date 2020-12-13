@@ -40,7 +40,7 @@
             <ion-input placeholder="Street, City, County, State, Country, ZipCode" [(ngModel)]="address[4]"
                        required></ion-input>
         </ion-item>
-        <ion-button expand="block" (click)="getClosest()"> <ion-icon name="navigate-outline"></ion-icon> Find closest </ion-button>
+        <ion-button expand="round" (click)="getClosest()"> <ion-icon name="navigate-outline"></ion-icon> Find closest </ion-button>
         <p>{{closestAddress}}</p>
     </div>
 </ion-content>
